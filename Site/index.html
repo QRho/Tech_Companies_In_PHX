@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TechinPHX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/bubblechart.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="sunset.jpg">Tech Companies in Phoenix
+        
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+        
+      <h1>Tech Companies in Phoenix</h1>
+      <p>An exploration...</p>
+    </div>
+    <div class="container">
+      <div class="col-md-12 line"> <br><h3 class='line centertext'> Welcome! </h3><h4 class='line'><br> Here you will find a list of the different software companies located here in the Phoenix and adjacent areas! <br>
+         Not only will you be able to find companies that align with your career goals, you will also have a brief summary of the companies industry and focus! <br> 
+      <br>Working within an industry that you care about can mean a lot when it comes to career satisfaction down the road. <br> So, while you have the resources here why not explore the possibilities within the industry of your choosing.<br> Don't wait for the perfect job to come to you! Get out there and find it! <br> </h4>
+    <br>
+    <br>
+    <br> 
+</div>
+      <div class="row">
+        <div class="col-md-12 line" >
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+         </div>
+<div class="col-md-12"> <h4 class='line'><br> This chart represents the different industry types that are here in the Phoenix area.<br>As you can see, Sales & Marketing seems to be the most prominent in the area, followed by Business Management & ERP. There are 31 different Industries represented here in total.
+  They range from personal fitness to cybersecurity software!
+<br> Click on the dots to explore information about the size of the industry.</h4>
+<br>
+</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 ">
+        <div id="bar-plot"></div>
+       </div>
+  </div>
+  <div class="col-md-12"> <h4 class='line'><br> In this chart, we wanted to break down the areas these companies are located in. As you can see, Scottsdale and Phoenix alone make up for 70% of the companies in the area.
+    Understandably these these areas are rich with commerce and new companies. If you live in an area with less tech companies like Mesa for instance you might have to consider commuting to work.</h4>
+    <br>
+    <br>
+    
+  <div class="row">
+    <div class="col-md-12 ">
+      <div id="bar-plot2"></div>
+     </div>
+</div>
+<div class="col-md-12"> <br> <h4 class='line'>In this chart, we wanted to show the different types of funding that the software companies in the area have. While most of them are self-funded, there are quite a few that are VC-Funded.<br><br> VC-Funded is when a firm has equity in the company since they have shown to have a good customer base along with a revenue strategy. <br><br>There are also quite a few companies that are considered Angel or Seed Funded, which means investors are involved with a company that is in the very early stages of starting up and possibly no customer base.
+  <br></h4>
+  <br>
+  <div class="row">
+  <div class="col-md-12 ">
+    <div id="bar-plot3"></div>
+   </div>
+</div>
+<div class="col-md-12"><h4 class='line'> <br> In our final chart, we wanted to look at the different size companies that are here in the Phoenix area. <br>As you can see, the majority of the software companies are on the smaller range. 69% of the companies have 50 employees or less.<br>
+  Company size can have a large impact on the work environment as well as benefits and company culture. Think to yourself about the difference between working for a mom and pop business versus a corporation. Some people prefer to work for larger companies while others prefer smaller ones. Think about what your preference might be and you can target your search to that criteria.
+</h4>
+  <br><div> Here is another resource to exlore the type of industry you might be interested to work in <a href='https://test.careeraddict.com/'>https://test.careeraddict.com/</a></div>
+  <br> 
+
+
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="title">Enter a Name</label>
+                        <input class="form-control" id="Title" type="text" placeholder="Company Name">
+                        <label for="location">Enter a City</label>
+                        <input class= "form-control" id="Location" type="text" placeholder="City">
+                        <label for="employees">Enter a Range</label>
+                        <input class="form-control" id="Employees" type="text" placeholder="51-200">                    
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="submit" class="btn btn-default">Filter/Reset</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="job-table btn" class=" table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Name</th>
+                  <th class="table-head">Detail</th>
+                  <th class="table-head">Website</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">Number of Employees</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">Tech Companies in Phoenix</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="static/plots.js"></script>
+  <script src="static/plot2.js"></script>
+  <script src="static/Company_Size.js"></script>
+  <script src="static/data.js"></script>
+  <script src="static/app.js"></script>
+</body>
+
+</html>
+
