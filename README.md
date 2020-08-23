@@ -15,5 +15,6 @@
 ## We had to use a couple of macros to clean the information after we initially scraped it. We did this in excel. There may or may not have been difficulties on the website to make it harder to scrape. The Jupyter notebook shows we were able to pull the individual rel tag attributes and write these to a dataframe and export to CSV, however, when the information is read in CSV, it was set up to display the complete HTML surrounding the object. The macro that we used will be referenced in the TheExport.jpg file. Excel has a built in function that interferes with numbers that have slashes between them. The size company 11-50 & 1-10 were consistently triggering a date function, and changing the numbers to dates. IE: January 10th, 1950 and such. To get around this, we had to change the CSV to .xlsx and work with it as a notebook instead of a CSV file.
 
 
-Site is live here:
-![Tech_Companies_in_Phoenix](https://tech-companies-in-phoenix.netlify.app/)
+## Site is live here: https://tech-companies-in-phoenix.netlify.app/
+
+
